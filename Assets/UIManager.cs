@@ -92,7 +92,7 @@ public class UIManager : MonoBehaviour
 
     private void DisableDisplay(CanvasGroup[] _canvasGroups, float _duration)
     {
-        StartCoroutine(DoFade(_canvasGroups, 1, 0, false, _duration));
+        StartCoroutine(DoButtonsFade(_canvasGroups, 1, 0, false, _duration));
     }
 
     private void EnableDisplay(CanvasGroup[] _canvasGroups, float _duration)
@@ -101,10 +101,10 @@ public class UIManager : MonoBehaviour
         {
             item.gameObject.SetActive(true);
         }
-        StartCoroutine(DoFade(_canvasGroups, 0, 1, true, _duration));
+        StartCoroutine(DoButtonsFade(_canvasGroups, 0, 1, true, _duration));
     }
 
-    private IEnumerator DoFade(CanvasGroup[] _canvasGroups, float _start, float _end, bool _flag, float _duration)
+    private IEnumerator DoButtonsFade(CanvasGroup[] _canvasGroups, float _start, float _end, bool _flag, float _duration)
     {
         float counter = 0f;
 
